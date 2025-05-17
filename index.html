@@ -1,31 +1,114 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Olodymyr - Assistente de IA Pessoal</title>
-    <meta name="description" content="Olodymyr - Seu assistente de IA pessoal com memória personalizada e capacidades de aprendizado." />
-    <meta name="author" content="Olodymyr AI" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olodymyr AI Assistant</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      margin: 2rem 0;
+      padding: 1rem;
+      background: #e8f5e9;
+      border-radius: 8px;
+    }
+    .status-indicator {
+      width: 12px;
+      height: 12px;
+      background: #4caf50;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .telegram-button {
+      display: inline-block;
+      background: #0088cc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+    .telegram-button:hover {
+      background: #006699;
+    }
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      width: 100%;
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Olodymyr AI Assistant</h1>
 
-    <meta property="og:title" content="Olodymyr AI" />
-    <meta property="og:description" content="Assistente de IA pessoal com memória personalizada e capacidades de aprendizado" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <div class="status">
+      <div class="status-indicator"></div>
+      <span>Service is running</span>
+    </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <p>Olodymyr is an intelligent AI assistant designed to function with lightweight LLM models while providing rich functionality through carefully designed systems and integrations.</p>
+
+    <p><strong>Key Features:</strong></p>
+    <ul>
+      <li>Maintains intelligence with lightweight models</li>
+      <li>Learns and adapts to user needs</li>
+      <li>Teaches concepts in a clear, didactic manner</li>
+      <li>Maintains consistent personality</li>
+      <li>Works through Telegram messaging platform</li>
+    </ul>
+
+    <p>This is a backend service running Python. Interact with Olodymyr through the Telegram bot:</p>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
+    <div style="text-align: center;">
+      <a href="#" class="telegram-button" id="telegram-link">Open in Telegram</a>
+    </div>
+  </div>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <footer>
+    &copy; <span id="current-year"></span> Olodymyr AI Assistant
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    // This would be updated with the actual bot link when deployed
+    document.getElementById('telegram-link').href = "https://t.me/your_bot_name_here";
+  </script>
+</body>
 </html>

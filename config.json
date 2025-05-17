@@ -1,0 +1,62 @@
+
+{
+  "bot_name": "Olodymyr",
+  "version": "0.1.0",
+  "description": "Personal AI assistant with learning capabilities",
+  
+  "telegram": {
+    "token": "YOUR_TELEGRAM_BOT_TOKEN",
+    "allowed_users": [],
+    "webhook_url": null,
+    "use_webhook": false
+  },
+  
+  "openrouter": {
+    "api_key": "YOUR_OPENROUTER_API_KEY",
+    "default_model": "anthropic/claude-instant-v1",
+    "fallback_model": "mistralai/mistral-small",
+    "max_tokens": 4000,
+    "models": {
+      "primary": "anthropic/claude-instant-v1",
+      "secondary": "mistralai/mistral-small",
+      "embeddings": "openai/text-embedding-ada-002"
+    }
+  },
+  
+  "supabase": {
+    "url": "YOUR_SUPABASE_URL",
+    "anon_key": "YOUR_SUPABASE_ANON_KEY",
+    "service_role_key": "YOUR_SUPABASE_SERVICE_ROLE_KEY"
+  },
+  
+  "chromadb": {
+    "persist_directory": "./chroma_db",
+    "collection_name": "olodymyr_memories",
+    "embedding_function": "openai"
+  },
+  
+  "memory": {
+    "short_term_limit": 10,
+    "working_memory_tokens": 2000,
+    "max_learning_chunk_size": 500
+  },
+  
+  "personality": {
+    "name": "Olodymyr",
+    "persona": "friendly, helpful professor",
+    "tone": "warm and educational",
+    "emoji_level": "moderate",
+    "verbosity": "medium"
+  },
+  
+  "features": {
+    "web_scraping": true,
+    "code_execution": false,
+    "file_upload": true
+  },
+  
+  "paths": {
+    "logs": "./logs",
+    "data": "./data"
+  }
+}
